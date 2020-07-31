@@ -9,6 +9,7 @@ import ViewDisplay from "./components/ViewDisplay";
 import InstaBox from "./components/InstaBox";
 
 const App = () => {
+  var i = 0;
   const data = [
     {
       name: faker.name.findName(),
@@ -17,9 +18,7 @@ const App = () => {
       image: faker.image.nature(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -28,9 +27,7 @@ const App = () => {
       image: faker.image.animals(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -39,9 +36,7 @@ const App = () => {
       image: faker.image.image(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -50,9 +45,7 @@ const App = () => {
       image: faker.image.business(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -61,9 +54,7 @@ const App = () => {
       image: faker.image.fashion(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -72,9 +63,7 @@ const App = () => {
       image: faker.image.people(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -83,9 +72,7 @@ const App = () => {
       image: faker.image.sports(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -94,9 +81,7 @@ const App = () => {
       image: faker.image.transport(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -105,9 +90,7 @@ const App = () => {
       image: faker.image.sports(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -116,9 +99,7 @@ const App = () => {
       image: faker.image.nature(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -127,9 +108,7 @@ const App = () => {
       image: faker.image.cats(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -138,9 +117,7 @@ const App = () => {
       image: faker.image.city(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -149,9 +126,7 @@ const App = () => {
       image: faker.image.nature(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -160,9 +135,7 @@ const App = () => {
       image: faker.image.nature(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -171,9 +144,7 @@ const App = () => {
       image: faker.image.nature(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
     {
       name: faker.name.findName(),
@@ -182,12 +153,9 @@ const App = () => {
       image: faker.image.nature(),
       number: faker.random.number(),
       word: faker.lorem.word(),
-      id: Math.ceil(
-        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
-      ),
+      id: i++,
     },
   ];
-
   const collection = data.map((user) => {
     return (
       <InstaBox key={user.id}>
@@ -202,7 +170,7 @@ const App = () => {
       </InstaBox>
     );
   });
-  
+
   return <React.Fragment>{collection}</React.Fragment>;
 };
 
