@@ -9,71 +9,201 @@ import ViewDisplay from "./components/ViewDisplay";
 import InstaBox from "./components/InstaBox";
 
 const App = () => {
-  const name = faker.name.findName();
-  return (
-    <React.Fragment>
-      <InstaBox>
-        <PersonDetail
-          name={name}
-          jobtype={faker.name.jobType()}
-          avatar={faker.image.avatar()}
-        />
-        <ImageDisplay image={faker.image.nature()} />
-        <ShareDisplay />
-        <ViewDisplay
-          number={faker.random.number()}
-          name={name}
-          word={faker.lorem.word()}
-        />
-      </InstaBox>
+  const data = [
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.nature(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.animals(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.image(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.business(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.fashion(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.people(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.sports(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.transport(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.sports(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.nature(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.cats(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.city(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.nature(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.nature(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.nature(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+    {
+      name: faker.name.findName(),
+      jobtype: faker.name.jobType(),
+      avatar: faker.image.avatar(),
+      image: faker.image.nature(),
+      number: faker.random.number(),
+      word: faker.lorem.word(),
+      id: Math.ceil(
+        Math.random() * 100 + Math.random() * 34 + Math.random() * 2342
+      ),
+    },
+  ];
 
-      <InstaBox>
+  const collection = data.map((user) => {
+    return (
+      <InstaBox key={user.id}>
         <PersonDetail
-          name={name}
-          jobtype={faker.name.jobType()}
-          avatar={faker.image.avatar()}
+          name={user.name}
+          jobtype={user.jobtype}
+          avatar={user.avatar}
         />
-        <ImageDisplay image={faker.image.animals()} />
+        <ImageDisplay image={user.image} />
         <ShareDisplay />
-        <ViewDisplay
-          number={faker.random.number()}
-          name={name}
-          word={faker.lorem.word()}
-        />
+        <ViewDisplay number={user.number} name={user.name} word={user.word} />
       </InstaBox>
-      
-      <InstaBox>
-        <PersonDetail
-          name={name}
-          jobtype={faker.name.jobType()}
-          avatar={faker.image.avatar()}
-        />
-        <ImageDisplay image={faker.image.image()} />
-        <ShareDisplay />
-        <ViewDisplay
-          number={faker.random.number()}
-          name={name}
-          word={faker.lorem.word()}
-        />
-      </InstaBox>
-      
-      <InstaBox>
-        <PersonDetail
-          name={name}
-          jobtype={faker.name.jobType()}
-          avatar={faker.image.avatar()}
-        />
-        <ImageDisplay image={faker.image.business()} />
-        <ShareDisplay />
-        <ViewDisplay
-          number={faker.random.number()}
-          name={name}
-          word={faker.lorem.word()}
-        />
-      </InstaBox>
-      
-    </React.Fragment>
-  );
+    );
+  });
+  
+  return <React.Fragment>{collection}</React.Fragment>;
 };
 
 ReactDOM.render(<App />, document.getElementById("root"));
